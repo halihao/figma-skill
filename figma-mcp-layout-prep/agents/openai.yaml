@@ -1,0 +1,15 @@
+interface:
+  display_name: "Figma MCP Layout Prep"
+  short_description: "批量整理 Figma 图层命名与 Auto Layout"
+  default_prompt: "Use $figma-mcp-layout-prep to prepare a Figma page or frame for MCP-friendly layout reconstruction."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "figma"
+      description: "Figma MCP server for reading metadata and applying write operations."
+      transport: "streamable_http"
+      url: "https://mcp.figma.com/mcp/"
+
+policy:
+  allow_implicit_invocation: true
